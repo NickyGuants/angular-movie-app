@@ -1,6 +1,6 @@
 # AngularMovieApp
 
-This is movie app created using Angular and consumes the IMDb Rapid API found here https://rapidapi.com/apidojo/api/imdb8/
+This is a movie app created using Angular and consumes the IMDb Rapid API found here https://rapidapi.com/apidojo/api/imdb8/
 
 ## Development server
 
