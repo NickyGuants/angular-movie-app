@@ -1,1 +1,4 @@
-<app-movies></app-movies>
+<div class="grid grid-cols-4 bg-black text-white my-4">
+    <app-movie *ngFor="let movie of movies" [movie]="movie" class=" mx-4">   
+    </app-movie>
+</div>
