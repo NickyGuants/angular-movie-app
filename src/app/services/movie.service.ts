@@ -8,9 +8,6 @@ import { Observable } from 'rxjs';
 })
   
 export class MovieService {
- private title: string =""
-  private APIUrl = "https://imdb8.p.rapidapi.com/title/get-coming-soon-movies"
-  //private movieUrl =`https://imdb8.p.rapidapi.com/${this.title}/get-details`
   private options = {
     headers: {
 		'X-RapidAPI-Host': 'imdb8.p.rapidapi.com',
@@ -22,11 +19,12 @@ export class MovieService {
   constructor (private http: HttpClient) { }
   
   getMovies(): Observable<any>{
-    return this.http.get<any>(this.APIUrl,this.options)
+    return this.http.get<any>("https://api.themoviedb.org/3/movie/popular?api_key=dcf62f1f6dc23e3c4ff22be5338b9afe&language=en-US&page=1")
   }
 
-  getMovieDetails(title: string): Observable<any>{
-    //this.title = title;
-    return this.http.get<any>(`https://imdb8.p.rapidapi.com/title/get-details?tconst=${title}`, this.options)
+  getNewMovies(): Observable<any>{
+    return this.http.get<any>("https://api.themoviedb.org/3/movie/now_playing?api_key=dcf62f1f6dc23e3c4ff22be5338b9afe&language=en-US")
   }
+
+
 }
