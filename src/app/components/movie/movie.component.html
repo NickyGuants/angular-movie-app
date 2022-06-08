@@ -1,7 +1,7 @@
 <div class="flex flex-col">
-    <img src={{movie?.image.url}} alt="cover image" width="250px" height="250px">
-    <h2 >{{movie.title}}</h2>
-    <div class="flex flex-row items-center"><p>{{movie.seriesStartYear}}</p><span>-</span><p>{{movie.seriesEndYear}}</p></div>
-    <p>{{movie.titleType}}</p>
-    <p>{{movie.runningTimeInMinutes}}</p>
+    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="object-cover h-48 w-96 rounded-md" alt="">
+    <h1 class="font-bold">{{movie.title}}</h1>
+    <!-- <p>{{movie.overview}}</p> -->
+    <p>{{movie.release_date}}</p>
+    <p>{{movie.vote_average}}</p>
 </div>
